@@ -1,0 +1,42 @@
+.App {
+  max-width: 1280px;
+  padding: 10px 25px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  background-color: rgba(226, 221, 221, 0.4);
+}
+
+.Search {
+  width: 75%;
+  border: 1px solid rgb(128, 128, 128);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px 1px rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  &__input {
+    width: 100%;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  &__suggestion-list {
+    list-style: none;
+    letter-spacing: 0.3em;
+    border-top: 1px solid rgb(128, 128, 128);
+    &::before {
+      content: " ";
+    }
+  }
+  &__suggestion-item {
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      text-decoration: underline;
+      background-color: rgba(128, 128, 128, 0.2);
+    }
+  }
+}
