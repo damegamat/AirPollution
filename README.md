@@ -1,3 +1,11 @@
+## Air Pollution app
+
+You can checkout 10 most polluted cities in country "Poland, Spain, France and Germany".
+
+### Technologies
+
+App build in React.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
