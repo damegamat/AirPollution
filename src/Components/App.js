@@ -13,9 +13,16 @@ class App extends React.Component {
     cities: [],
     pass: false
   };
-
+  setLastText() {
+    this.setState({
+      text: `${
+        localStorage.getItem("text") ? localStorage.getItem("text") : ""
+      }`
+    });
+  }
   autoComplete = prevState => {
     const value = this.refs.text.value;
+    localStorage.setItem(`text`, value);
     let suggestions = [];
     if (value.length > 0) {
       const regex = new RegExp(`^${value}`, `i`);
@@ -89,6 +96,9 @@ class App extends React.Component {
         });
       });
   };
+  componentDidMount() {
+    this.setLastText();
+  }
   componentDidUpdate(prevProps, prevState) {
     if (this.state.text !== prevState.text) {
       this.getCountry();
