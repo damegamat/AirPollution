@@ -55,12 +55,10 @@ class City extends React.Component {
         <p
           className={`City__description 
             ${
-              this.state.descriptionIsActive
-                ? "City__description--active"
-                : null
+              this.state.descriptionIsActive ? "City__description--active" : ""
             }`}
         >
-          {this.state.descriptionText}
+          {this.state.descriptionText ? this.state.descriptionText : "No Data"}
         </p>
       </>
     );
