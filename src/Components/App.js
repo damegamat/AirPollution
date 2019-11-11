@@ -1,5 +1,5 @@
 import React from "react";
-import City from "./City";
+import CityList from "./CityList";
 import "../styles/css/App.css";
 
 //API COUNTRY
@@ -55,7 +55,6 @@ class App extends React.Component {
       .then(data => {
         data.results.map(item => {
           if (item.name === this.capitalize(this.state.text)) {
-            console.log(item.name);
             this.setState(() => ({
               code: item.code,
               pass: true
@@ -69,7 +68,7 @@ class App extends React.Component {
         });
       })
       .catch(err => {
-        console.log(err);
+        alert(err);
       });
   };
   getCities = () => {
@@ -94,6 +93,9 @@ class App extends React.Component {
         this.setState({
           cities: tenCities
         });
+      })
+      .catch(err => {
+        alert(err);
       });
   };
   componentDidMount() {
@@ -111,7 +113,7 @@ class App extends React.Component {
     }
   }
   render() {
-    const { suggestions, text, cities, descriptionText } = this.state;
+    const { suggestions, text, cities } = this.state;
     return (
       <div className="App">
         <h1>{"10 most polluted cities in country".toUpperCase()}</h1>
@@ -137,18 +139,7 @@ class App extends React.Component {
             </ul>
           ) : null}
         </div>
-        <div className="City">
-          <ul className="City__list-item">
-            {cities.map(name => (
-              <City
-                key={name}
-                name={name}
-                getDescription={this.getDescription}
-                text={descriptionText}
-              />
-            ))}
-          </ul>
-        </div>
+        <CityList cities={cities} />
       </div>
     );
   }
