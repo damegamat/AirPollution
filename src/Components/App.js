@@ -38,6 +38,7 @@ class App extends React.Component {
       text: value,
       suggestions: []
     }));
+    localStorage.setItem(`text`, value);
   }
   capitalize = str => {
     if (!str) return "";
