@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,AAAC,CACJ,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,SAAS,CACjB,UAAU,CAAE,GAAG,CAKhB,AAJE,AAAD,gBAAY,AAAC,CACX,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACvB",
+    "sources": [
+        "../sass/CityList.scss"
+    ],
+    "names": [],
+    "file": "CityList.css"
+}
