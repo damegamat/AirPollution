@@ -1,7 +1,7 @@
 import React from "react";
 import fetchJsonp from "fetch-jsonp";
 
-import "../styles/css/City.css";
+import "../Styles/css/City.css";
 
 class City extends React.Component {
   state = {

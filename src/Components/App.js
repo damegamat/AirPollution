@@ -1,6 +1,6 @@
 import React from "react";
 import CityList from "./CityList";
-import "../styles/css/App.css";
+import "../Styles/css/App.css";
 
 //API COUNTRY
 const APIcountry = "https://api.openaq.org/v1/countries";
