@@ -27,11 +27,13 @@
     width: 100%;
     padding: 5px 0 0;
     background-color: #f3f1f1;
-    display: none;
+    transition: opacity 1s ease-out;
     opacity: 0;
+    height: 0;
+    overflow: hidden;
     &--active {
-      display: block;
       opacity: 1;
+      height: auto;
     }
   }
 }
